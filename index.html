@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Первый урок</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/mgopen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300i,400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/all.css">
+</head>
+
+<body>
+
+
+    <header>
+        <section class="top1">
+            <div class="new_route">
+                <h1>Минск <i class="fas fa-arrows-alt-h"></i> Москва</h1>
+                <p>7 &nbsp;&mdash; 10 декабря</p>
+            </div>
+        </section>
+
+        <section class="top2">
+            <nav>
+                <a href="#">Главное табло</a>
+            </nav>
+            <div class="add_route">
+                <div>
+                    <table>
+                        <tr>
+                            <select id="select"  name="select" aria-required="true" onChange="Selected(this)">
+                                <option selected disabled value="">Выберите транспорт</option>
+                                <option value="автобус" class="t8">автобус</option>
+                                <option value="поезд" class="t8">поезд</option>
+                                <option value="такси" class="t8">такси</option>
+                            </select>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder=""  id="t1" value="Минск"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="" id="t2" value="2019-12-31"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="datetime-local"  id="t3" value="2019-12-31T10:10"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="" id="t5" value="Москва"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" step="0.01" min="0" placeholder="0,00" id="t6" value="0,00"> ₽</td>
+                        </tr>
+                                               
+                    </table>
+                    <button type="button" onclick="insertRow('myTable');return false;">+ Добавить новый путь</button>
+                    
+                </div>                
+            </div>
+
+        </section>
+    </header>
+
+    <section>
+        <table id="myTable" cellspacing="0" class ="demotable">
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+
+    <script src="./script.js"></script>
+    <script src="./fonts/all.js"></script>
+</body>
+
+</html>
